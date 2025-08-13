@@ -35,7 +35,7 @@ To compile and run this mod, you'll need:
 
 ### Installing BepInEx 6
 1. Download the [BepInEx 6 Bleeding Edge IL2CPP x64](https://builds.BepInEx.dev/projects/BepInEx_be).
-2. Extract the contents into the *The Great Villainess: Strategy of Lily* game directory, where the game's `KAMiBAKO.exe` is located.
+2. Extract the contents into the *The Great Villainess: Strategy of Lily* game directory, where the game's exe is located.
 
 ### Installing and Compiling the Mod
 1. Download from releases or compile yourself (see below for instructions).
@@ -44,17 +44,17 @@ To compile and run this mod, you'll need:
 The folder structure should look like this:
 
 ```
-KAMiBAKO/
+Game Folder/
 │
 ├── BepInEx/
 │   ├── plugins/
 │   │   └── Kurisutaru-GreatVillainess-Mod.dll
 │   └── config/
-└── GreatVillainess.exe
+└── Game.exe
 ```
 
 ### Verifying Installation
-Launch *KAMiBAKO* and check for console output from BepInEx, confirming that the mod is loaded successfully.
+Launch the game and check for console output from BepInEx, confirming that the mod is loaded successfully.
 
 ## Usage
 
@@ -62,7 +62,7 @@ Once installed, use the mod's features as described in its documentation. Please
 
 ## Configuration
 
-A configuration file will be generated after first run with the mod installed, located in the `BepInEx/config` folder. The config file name was `net.kurisutaru.greatvillainess.cfg`.
+A configuration file will be generated after first run with the mod installed, located in the `BepInEx/config` folder. The config file name was `net.kurisutaru.something-something.cfg`.
 
 You can edit this file to customize settings for your preferred modifications.
 
