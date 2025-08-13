@@ -1,24 +1,45 @@
-# Kurisutaru's KAMiBAKO Mod - BepInEx IL2CPP
+<div align="center">
+    <img src="./assets/The Great Villainess BepinEX IL2CPP.png" style="vertical-align: bottom" alt="logo">
+</div>
 
-A mod for the *KAMiBAKO* game, developed using BepInEx 6 IL2CPP.
+# Kurisutaru's The Great Villainess: Strategy of Lily Mod
+
+A mod for the *The Great Villainess: Strategy of Lily* game, developed using BepInEx 6 IL2CPP.
+
+## Kuri Yapping Corner
+1. Something wrong with the game method that repeatedly called every action, like I can enlarge the distance of the ship, but its repeatedly called and stacking into same variable not replacing, and 10 min playing, the ship effect range become entire map, so i need like collecting the array -> store it -> every subsequent call just throw those array.
+   Don't trust me ? Here, Lily can capture many times earth rotation lol
+
+   ![](./assets/weird-range.png)
+
+2. Also it's friggin lag, and imbalance for last stages.
+
+Feel free to open issue if you want to ask something or want to me looking something to implement.
+
+## Game Information
+
+- **Game Name**: The Great Villainess: Strategy of Lily
+- **Steam Store URL**: https://store.steampowered.com/app/2454960/The_Great_Villainess_Strategy_of_Lily/
+- **Tested Game Version**: build 19406299
+- **.Net Version**: 6
+- **BepInEx Version**: 6 Bleeding Edge
 
 ## Requirements
+To compile and run this mod, you'll need:
 
-- **BepInEx 6**: A modding framework for Unity games.
-- **.NET 6.0+**: Required for compiling BepInEx-based plugins.
-- **Visual Studio** (or compatible IDE) for building the mod (optional).
+- **BepInEx 6**: A popular modding framework for Unity games.
+- **.NET 6.0**: Required for compiling BepInEx-based plugins.
+- **Visual Studio** (or a compatible IDE) to build the mod (optional).
 
 ## Installation
 
-### 1. Install BepInEx 6
-
+### Installing BepInEx 6
 1. Download the [BepInEx 6 Bleeding Edge IL2CPP x64](https://builds.BepInEx.dev/projects/BepInEx_be).
-2. Extract the contents into the *KAMiBAKO* game directory (where the game's `KAMiBAKO.exe` is located).
+2. Extract the contents into the *The Great Villainess: Strategy of Lily* game directory, where the game's `KAMiBAKO.exe` is located.
 
-### 2. Install the Mod
-
-1. Download from releases or compile yourself (instruction below).
-2. Copy the contents into the `BepInEx/plugins` folder located in the *KAMiBAKO* game directory.
+### Installing and Compiling the Mod
+1. Download from releases or compile yourself (see below for instructions).
+2. Copy the compiled `.dll` file to the `BepInEx/plugins` folder in your *The Great Villainess: Strategy of Lily* game directory.
 
 The folder structure should look like this:
 
@@ -27,44 +48,43 @@ KAMiBAKO/
 │
 ├── BepInEx/
 │   ├── plugins/
-│   │   └── YourMod.dll
+│   │   └── Kurisutaru-GreatVillainess-Mod.dll
 │   └── config/
-└── KAMiBAKO.exe
+└── GreatVillainess.exe
 ```
 
-### 3. Verify Installation
-
-Launch *KAMiBAKO*. You should see console output from BepInEx, confirming that the mod is loaded successfully.
+### Verifying Installation
+Launch *KAMiBAKO* and check for console output from BepInEx, confirming that the mod is loaded successfully.
 
 ## Usage
 
-Once the mod is installed, you can use its features in the game as per the mod's functionality. Please refer to the specific mod documentation for usage instructions.
+Once installed, use the mod's features as described in its documentation. Please refer to specific instructions within the mod itself.
 
 ## Configuration
 
-Configuration file will be generated after first run with the mod installed, they will be located in the `BepInEx/config` folder. The configuration file name was net.kurisutaru.kamibako.cfg
+A configuration file will be generated after first run with the mod installed, located in the `BepInEx/config` folder. The config file name was `net.kurisutaru.greatvillainess.cfg`.
 
-You can edit this file to customize the parameter. I put some description what config for what modify ingame.
+You can edit this file to customize settings for your preferred modifications.
 
-## Compile yourself
+### Compiling Yourself
+To compile yourself:
 
-### Prerequisites
-
-- **Visual Studio 2022** or later.
-- **.NET 6 SDK** (or compatible version) for compiling the mod.
-- **Assembly-CSharp.dll and Il2Cppmscorlib.dll** to lib folder from BepInEx interop folder.
+1. **Prerequisites**:
+	* **Visual Studio 2022 or later**: A compatible IDE.
+	* **.NET 6 SDK (or compatible version)**: For compiling the mod.
+	* Copy `Assembly-CSharp.dll`, `Il2Cppmscorlib.dll`, `UnityEngine.CoreModule.dll`, and `AON.dll` from BepInEx interop folder to your project's lib folder, as these DLLs are required for compilation.
 
 ### Building the Mod
-
 1. Clone or download the repository.
 2. Open the solution file in Visual Studio.
-3. Build the solution, and the compiled `.dll` will be output to the `bin/Debug` (or `bin/Release`) directory.
+3. Build the solution, which will output a compiled `.dll` to `bin/Debug` (or `bin/Release`) directory.
 4. Copy the compiled `.dll` to the `BepInEx/plugins` folder.
 
 ## Troubleshooting
+- **Mod Not Loading**: Ensure you're using IL2CPP version of BepInEx and place your mod in correct `BepInEx/plugins` folder.
 
-- **Mod Not Loading**: Ensure you're using the IL2CPP version of BepInEx and the mod is placed in the correct `BepInEx/plugins` folder.
+## Disclaimer
+All product names are trademarks of their respective companies. © Alliance Arts.
 
 ## License
-
-This mod is released under the MIT License. See the [LICENSE](LICENSE) file for details.
+This mod is released under MIT License. See [LICENSE](LICENSE.md) file for details.

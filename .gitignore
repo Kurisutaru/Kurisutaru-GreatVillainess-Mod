@@ -347,3 +347,21 @@ healthchecksdb
 
 # Backup folder for Package Reference Convert tool in Visual Studio 2017
 MigrationBackup/
+
+# Common IntelliJ Platform excludes
+
+# User specific
+**/.idea/**
+*.suo
+*.user
+.vs/
+[Bb]in/
+[Oo]bj/
+_UpgradeReport_Files/
+[Pp]ackages/
+
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+Kurisutaru-GreatVillainess-Mod/lib/*.dll
